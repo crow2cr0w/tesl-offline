@@ -1,0 +1,27 @@
+Pinned source snapshots for build-time third-party dependencies
+
+HarmonyX (output 0Harmony.dll, assembly version 2.9.0.0)
+  Repository: https://github.com/BepInEx/HarmonyX
+  Tag: v2.9.0
+  Commit: 31d794f3affce55fa87c99efac7dae23a126cf52
+  License files: HarmonyX/LICENSE, HarmonyX/LICENSE.Harmony
+
+Mono.Cecil and Mono.Cecil.Rocks (assembly version 0.10.4.0)
+  Repository: https://github.com/jbevain/cecil
+  Tag: 0.10.4
+  Commit: 98ec890d44643ad88d573e97be0e120435eda732
+  License file: Mono.Cecil/LICENSE.txt
+
+MonoMod.RuntimeDetour and MonoMod.Utils (assembly version 22.1.29.1)
+  Repository: https://github.com/MonoMod/MonoMod
+  Tag: v22.01.29.01
+  Commit: 68cf23127bd2394004e8a812b160a0862c95a309
+  License file: MonoMod/LICENSE
+  Pinned source submodule MonoMod.Common:
+    Commit: aceda0b47aa6b17faac4f0889bb9b4621194da4c
+    License file: MonoMod/MonoMod.Common/LICENSE
+
+These directories hold the pinned source snapshots and upstream license files.
+The five tools/runtime-embed/*.dll files are generated at build time by
+./tools/build-runtime-deps.sh and are deliberately not distributed in source.
+The builder requires Mono mcs and the Roslyn compiler bundled with a .NET SDK.
